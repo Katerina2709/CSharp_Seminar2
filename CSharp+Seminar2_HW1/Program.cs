@@ -6,14 +6,15 @@
 
 Console.Write ("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int ost = 0;
-if ((Math.Abs(number) < 100) || (Math.Abs(number) > 999)) 
+// int ost = 0;
+// число может быть отрицательным,поэтому возьмем его модуль
+number = Math.Abs(number);
+if (( number < 100) || ( number > 999)) 
 {  
     Console.WriteLine("Число не соответствует условию.");
 }
 else
 {    
-    if (number > 0) ost = number % 100;
-    else ost = Math.Abs(number) % 100;
+    int ost = number % 100;
     Console.WriteLine($"Вторая цифра числа = {ost / 10}");
 }
