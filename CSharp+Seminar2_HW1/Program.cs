@@ -6,7 +6,7 @@
 
 Console.Write ("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-// int ost = 0;
+
 // число может быть отрицательным,поэтому возьмем его модуль
 number = Math.Abs(number);
 if (( number < 100) || ( number > 999)) 
